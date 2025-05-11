@@ -3,7 +3,7 @@
 int main()
 {
     // Declaracao de variaveis
-    unsigned long int populacao[2], pontos[2], vencedores[6];
+    unsigned long int populacao[2], pontos[2], vencedores[7];
     float area[2], pib[2], densidadep[2], pibper[2], super_poder[2];
     char estado[2][10], CDcarta[2][10], Ncidade[2][10];
 
@@ -68,9 +68,10 @@ int main()
     vencedores[2] = (pib[0] > pib[1]) ;
     vencedores[3] = (pontos[0] > pontos[1]);
     vencedores[4] = (densidadep[0] < densidadep[1]); // Vence quem tem menor densidade populacional
-    vencedores[5] = (super_poder[0] > super_poder[1]);
+    vencedores[5] = (pibper[0] > pibper[1]);
+    vencedores[6] = (super_poder[0] > super_poder[1]);
 
-    // Imprimir na tela Carta 1
+     // Imprimir na tela Carta 1
     printf  (" Carta : 1\n Estado : %s\n Codigo : %s\n Nome da Cidade : %s\n Populacao : %i\n Area: %.2f\n PIB: %.2f\n Numero de Pontos Turisticos: %i\n Densidade Populacional: %.2f\n PIB per Capita: %.2f\n ", &estado[0], &CDcarta[0], &Ncidade[0], populacao[0], area[0], pib[0], pontos[0], densidadep[0], pibper[0]);
 
     // Pula linha
@@ -85,7 +86,7 @@ int main()
     printf("Area: Carta %d venceu (%d)\n", vencedores[1]? 1 : 2 , vencedores[1]);
     printf("PIB: Carta %d venceu (%d)\n", vencedores[2] ? 1 : 2, vencedores[2]);
     printf("Pontos Turiasticos: Carta %d venceu (%d)\n", vencedores[3]? 1 : 2, vencedores[3]);
-    printf("Densidade Populacional: Carta %d venceu (%d) (menor densidade a melhor)\n", vencedores[4]? 1 : 2, vencedores[4]);
+    printf("Densidade Populacional: Carta %d venceu (%d)\n", vencedores[4]? 1 : 2, vencedores[4]);
     printf("PIB per Capita: Carta %d venceu (%d)\n", vencedores[5] ? 1 : 2, vencedores[5]);
     printf("Super Poder: Carta %d venceu (%d)\n", vencedores[6]? 1 : 2 , vencedores[6]);
 
